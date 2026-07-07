@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eileen Office Prep | Excel & Office College Ramp-Up</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --green: #059669;
+      --amber: #d97706;
+      --red: #dc2626;
+      --border: #d9e2ef;
+      --soft-blue: #eaf1ff;
+      --soft-green: #ecfdf5;
+      --soft-amber: #fff7ed;
+      --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+    header { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%); color: white; padding: 42px 24px; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 12px; opacity: .86; font-weight: 700; }
+    h1 { margin: 10px 0 8px; font-size: clamp(30px, 5vw, 52px); line-height: 1.05; }
+    .subtitle { font-size: clamp(16px, 2vw, 21px); max-width: 900px; opacity: .95; }
+    .print-note { color: white; opacity: .85; margin-top: 14px; font-size: 13px; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--border); backdrop-filter: blur(8px); }
+    .nav-inner { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 16px; }
+    nav a { color: var(--blue-dark); text-decoration: none; padding: 8px 10px; border-radius: 10px; font-weight: 700; font-size: 14px; }
+    nav a:hover { background: var(--soft-blue); }
+    main { padding: 28px 18px 60px; }
+    section { margin: 0 auto 28px; max-width: 1180px; }
+    .card, .module-card, details { background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
+    .card { padding: 24px; }
+    .module-card { padding: 18px; }
+    h2 { margin: 0 0 14px; font-size: 28px; }
+    h3 { margin: 18px 0 8px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .span-3 { grid-column: span 3; } .span-4 { grid-column: span 4; } .span-6 { grid-column: span 6; } .span-8 { grid-column: span 8; } .span-12 { grid-column: span 12; }
+    @media (max-width: 850px) { .span-3,.span-4,.span-6,.span-8,.span-12 { grid-column: span 12; } }
+    .pill { display: inline-block; margin: 4px 6px 4px 0; padding: 6px 10px; border-radius: 999px; background: var(--soft-blue); color: var(--blue-dark); font-size: 13px; font-weight: 700; }
+    .pill.green { background: var(--soft-green); color: #047857; }
+    .pill.amber { background: var(--soft-amber); color: #92400e; }
+    .callout { border-left: 5px solid var(--blue); background: var(--soft-blue); padding: 14px 16px; border-radius: 12px; margin: 14px 0; }
+    .callout.green { border-left-color: var(--green); background: var(--soft-green); }
+    .callout.amber { border-left-color: var(--amber); background: var(--soft-amber); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; overflow: hidden; border-radius: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #eef4ff; color: #1e3a8a; }
+    td.num, th.num { text-align: right; }
+    pre { white-space: pre-wrap; background: #0f172a; color: #e5e7eb; padding: 14px; border-radius: 12px; overflow-x: auto; }
+    code { background: #eef2ff; color: #1e40af; padding: 1px 5px; border-radius: 5px; }
+    details { padding: 14px 16px; margin: 12px 0; }
+    summary { cursor: pointer; font-weight: 800; color: var(--blue-dark); }
+    .num-badge { display: inline-flex; width: 30px; height: 30px; border-radius: 50%; align-items: center; justify-content: center; background: var(--blue); color: white; font-weight: 800; margin-right: 8px; }
+    .small { font-size: 13px; color: var(--muted); }
+    @media print { nav { display: none; } body { background: white; } .card, .module-card, details { box-shadow: none; break-inside: avoid; } header { background: #1e3a8a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Varsity Tutors | College Readiness</div>
+      <h1>Microsoft Office College Prep</h1>
+      <div class="subtitle">A practical 5-hour ramp-up to help Eileen build confidence with Microsoft Excel, PowerPoint, and everyday Office tools before college.</div>
+      <div class="print-note">Includes the learning path, reference library, practice bank, and Session 1 Excel Foundations module.</div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#welcome">Welcome</a>
+      <a href="#path">Learning Path</a>
+      <a href="#reference">Reference</a>
+      <a href="#practice-bank">Practice Bank</a>
+      <a href="#session1">Session 1</a>
+      <a href="#progress">Progress</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="welcome">
+      <div class="card">
+        <h2>Welcome, Eileen</h2>
+        <div class="grid">
+          <div class="span-8">
+            <p>This short Microsoft Office prep sequence is designed to help you feel more comfortable using Excel and PowerPoint for college assignments, projects, and business-school coursework.</p>
+            <p>You do not need to learn every feature in Excel. Most college tasks rely on a practical set of skills used again and again: entering information, organizing it clearly, formatting it professionally, using basic formulas, creating simple charts, and saving or submitting files correctly.</p>
+          </div>
+          <div class="span-4">
+            <h3>Program Snapshot</h3>
+            <p><strong>Total time:</strong> 5 hours</p>
+            <p><strong>Main focus:</strong> Excel confidence and basic proficiency</p>
+            <p><strong>Also included:</strong> PowerPoint and Office workflow</p>
+            <span class="pill">Step-by-step</span>
+            <span class="pill green">Hands-on</span>
+            <span class="pill amber">College-ready</span>
+          </div>
+        </div>
+        <div class="callout green">
+          <strong>By the end:</strong> You should be able to create a clean spreadsheet, use common formulas, organize data, make a simple chart, move information into PowerPoint, and save your work clearly.
+        </div>
+      </div>
+    </section>
+
+    <section id="path">
+      <div class="card">
+        <h2>5-Hour Learning Path</h2>
+        <p>Each session creates a useful product while building practical skills you can reuse in college.</p>
+        <div class="grid">
+          <div class="span-4 module-card">
+            <h3><span class="num-badge">1</span>Excel Foundations</h3>
+            <p><strong>You will build:</strong> College Budget Tracker</p>
+            <p><strong>You will practice:</strong> navigation, rows/columns/cells, data entry, formatting, currency, subtraction formulas, <code>SUM</code>, and saving files.</p>
+          </div>
+          <div class="span-4 module-card">
+            <h3><span class="num-badge">2</span>Formulas and Percentages</h3>
+            <p><strong>You will build:</strong> Grade Tracker</p>
+            <p><strong>You will practice:</strong> formulas, percentages, averages, minimums, maximums, autofill, and formula checking.</p>
+          </div>
+          <div class="span-4 module-card">
+            <h3><span class="num-badge">3</span>Tables and Assignments</h3>
+            <p><strong>You will build:</strong> Assignment Tracker</p>
+            <p><strong>You will practice:</strong> tables, sorting, filtering, due dates, assignment status, and priority tracking.</p>
+          </div>
+          <div class="span-6 module-card">
+            <h3><span class="num-badge">4</span>Charts and PowerPoint</h3>
+            <p><strong>You will build:</strong> College Spending Presentation</p>
+            <p><strong>You will practice:</strong> creating charts, explaining data, copying Excel visuals into PowerPoint, and building clean slides.</p>
+          </div>
+          <div class="span-6 module-card">
+            <h3><span class="num-badge">5</span>Capstone Office Simulation</h3>
+            <p><strong>You will build:</strong> College Course Planner Dashboard</p>
+            <p><strong>You will practice:</strong> building from scratch, formulas, tables, filters, charts, PowerPoint, and file management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reference">
+      <div class="card">
+        <h2>Quick Reference Library</h2>
+        <div class="grid">
+          <div class="span-6">
+            <h3>Excel Vocabulary</h3>
+            <table>
+              <tr><th>Term</th><th>Meaning</th></tr>
+              <tr><td>Workbook</td><td>The full Excel file.</td></tr>
+              <tr><td>Worksheet</td><td>One tab inside the workbook.</td></tr>
+              <tr><td>Cell</td><td>One box in the spreadsheet.</td></tr>
+              <tr><td>Row</td><td>A horizontal line of cells.</td></tr>
+              <tr><td>Column</td><td>A vertical line of cells.</td></tr>
+              <tr><td>Cell Reference</td><td>The address of a cell, like A1 or B2.</td></tr>
+              <tr><td>Range</td><td>A group of cells, like B2:B10.</td></tr>
+              <tr><td>Formula Bar</td><td>The place where you can see or edit a cell's contents.</td></tr>
+            </table>
+          </div>
+          <div class="span-6">
+            <h3>Formula Starter Pack</h3>
+            <pre>=SUM(B2:B10)
+=AVERAGE(B2:B10)
+=MIN(B2:B10)
+=MAX(B2:B10)
+=B2-C2
+=B2/C2
+=COUNTIF(A2:A10,"Complete")
+=TODAY()</pre>
+            <div class="callout amber">
+              <strong>Formula reminders:</strong> Start with <code>=</code>, use cell references, use <code>:</code> for a range, and always check whether the answer makes sense.
+            </div>
+          </div>
+        </div>
+        <h3>Common Excel Mistakes to Watch For</h3>
+        <ul>
+          <li>Forgetting the <code>=</code> sign at the start of a formula.</li>
+          <li>Selecting the wrong cells in a formula.</li>
+          <li>Typing numbers as text.</li>
+          <li>Forgetting to format percentages.</li>
+          <li>Copying a formula but not checking the changed references.</li>
+          <li>Saving the file with an unclear name or submitting the wrong version.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="practice-bank">
+      <div class="card">
+        <h2>Practice Bank</h2>
+        <p>These practice options provide extra repetition and confidence-building when there is additional time.</p>
+        <details open>
+          <summary>5-Minute Practice</summary>
+          <ul>
+            <li>Write a <code>SUM</code> formula.</li>
+            <li>Format a column as currency.</li>
+            <li>Rename a worksheet.</li>
+            <li>Sort a list by date.</li>
+            <li>Fix a broken formula.</li>
+            <li>Save a file with a clear name.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>10-Minute Practice</summary>
+          <ul>
+            <li>Build a 5-row budget tracker.</li>
+            <li>Build a 5-assignment grade tracker.</li>
+            <li>Create one chart.</li>
+            <li>Clean up a messy spreadsheet.</li>
+            <li>Copy a chart into PowerPoint.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>15-Minute Practice</summary>
+          <ul>
+            <li>Build a mini assignment tracker.</li>
+            <li>Create a dashboard summary.</li>
+            <li>Create a 3-slide presentation.</li>
+            <li>Complete a teach-back: “Show how you would explain this to a friend.”</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section id="session1">
+      <div class="card">
+        <h2>Session 1: Excel Foundations</h2>
+        <p><strong>Session product:</strong> College Budget Tracker</p>
+        <p><strong>Main goal:</strong> Create and save a clean first spreadsheet while practicing basic Excel navigation, formatting, and formulas.</p>
+        <div class="callout">
+          <strong>Today’s big idea:</strong> Excel becomes much less intimidating when you focus on a few core moves: enter information, make it readable, use formulas to calculate, and save your work clearly.
+        </div>
+
+        <h3>What You Will Be Able to Do</h3>
+        <ul>
+          <li>Open a blank Excel workbook.</li>
+          <li>Identify rows, columns, cells, worksheets, and the formula bar.</li>
+          <li>Enter and edit data.</li>
+          <li>Adjust column widths and format headers.</li>
+          <li>Format numbers as currency.</li>
+          <li>Use a subtraction formula.</li>
+          <li>Use <code>=SUM()</code>.</li>
+          <li>Save a file with a clear name.</li>
+          <li>Explain what the spreadsheet does.</li>
+        </ul>
+
+        <h3>Session Flow</h3>
+        <table>
+          <tr><th>Time</th><th>Focus</th><th>What Happens</th></tr>
+          <tr><td>0–5 min</td><td>Welcome and goal</td><td>Confirm Excel access and preview the budget tracker.</td></tr>
+          <tr><td>5–12 min</td><td>Excel orientation</td><td>Review workbook, worksheet, rows, columns, cells, formula bar, worksheet tabs, and file saving.</td></tr>
+          <tr><td>12–25 min</td><td>Build tracker</td><td>Add a title, headers, and sample college budget data.</td></tr>
+          <tr><td>25–35 min</td><td>Format sheet</td><td>Bold headers, widen columns, format currency, add borders, and align content clearly.</td></tr>
+          <tr><td>35–45 min</td><td>Add formulas</td><td>Add the Difference formula and copy it down with autofill.</td></tr>
+          <tr><td>45–52 min</td><td>Add totals</td><td>Use <code>SUM</code> formulas for estimated, actual, and difference totals.</td></tr>
+          <tr><td>52–57 min</td><td>Review</td><td>Explain one formula, one formatting choice, and how to save the file.</td></tr>
+          <tr><td>57–60 min</td><td>Preview</td><td>Next session: grade tracker, formulas, percentages, averages, and autofill.</td></tr>
+        </table>
+
+        <h3>File to Create</h3>
+        <pre>Eileen_College_Budget_Tracker.xlsx</pre>
+
+        <h3>Core Budget Tracker Data</h3>
+        <table>
+          <tr><th>Item</th><th>Category</th><th class="num">Estimated Cost</th><th class="num">Actual Cost</th><th class="num">Difference</th></tr>
+          <tr><td>Textbooks</td><td>Books</td><td class="num">450</td><td class="num">385</td><td></td></tr>
+          <tr><td>Laptop Case</td><td>Supplies</td><td class="num">35</td><td class="num">29</td><td></td></tr>
+          <tr><td>Parking Pass</td><td>Transportation</td><td class="num">180</td><td class="num">180</td><td></td></tr>
+          <tr><td>Dorm Supplies</td><td>Housing</td><td class="num">300</td><td class="num">275</td><td></td></tr>
+          <tr><td>Meal Plan Add-ons</td><td>Food</td><td class="num">150</td><td class="num">125</td><td></td></tr>
+          <tr><td>Notebooks</td><td>Supplies</td><td class="num">40</td><td class="num">32</td><td></td></tr>
+          <tr><td>Calculator</td><td>Supplies</td><td class="num">120</td><td class="num">110</td><td></td></tr>
+          <tr><td>Laundry</td><td>Housing</td><td class="num">60</td><td class="num">48</td><td></td></tr>
+        </table>
+
+        <h3>Formulas for Session 1</h3>
+        <pre>=D4-C4
+=SUM(C4:C11)
+=SUM(D4:D11)
+=SUM(E4:E11)</pre>
+
+        <details open>
+          <summary>Extra Practice 1: Add More Budget Items</summary>
+          <table>
+            <tr><th>Item</th><th>Category</th><th class="num">Estimated Cost</th><th class="num">Actual Cost</th></tr>
+            <tr><td>Backpack</td><td>Supplies</td><td class="num">75</td><td class="num">68</td></tr>
+            <tr><td>Phone Charger</td><td>Technology</td><td class="num">25</td><td class="num">22</td></tr>
+            <tr><td>Lab Fee</td><td>Course Fee</td><td class="num">90</td><td class="num">90</td></tr>
+            <tr><td>Coffee/Snacks</td><td>Food</td><td class="num">80</td><td class="num">95</td></tr>
+            <tr><td>Printer Ink</td><td>Supplies</td><td class="num">45</td><td class="num">39</td></tr>
+          </table>
+          <p>Then extend the formulas and update totals.</p>
+        </details>
+
+        <details>
+          <summary>Extra Practice 2: Category Summary</summary>
+          <p>Create a side table with categories and actual costs. Start by manually totaling categories. When ready, try a <code>SUMIF</code> formula.</p>
+          <pre>=SUMIF(B4:B16,"Supplies",D4:D16)</pre>
+        </details>
+
+        <details>
+          <summary>Extra Practice 3: Error Hunt</summary>
+          <ul>
+            <li>Find a formula that points to the wrong row.</li>
+            <li>Find a cost that is typed as text.</li>
+            <li>Find a missing actual cost.</li>
+          </ul>
+          <p>Helpful questions: What looks off? How could the total be checked? Where should the formula be looking?</p>
+        </details>
+
+        <details>
+          <summary>Independent Challenge: Dorm Supplies Sheet</summary>
+          <p>Create a new worksheet called <strong>Dorm Supplies</strong>.</p>
+          <table>
+            <tr><th>Item</th><th>Store</th><th class="num">Estimated Cost</th><th class="num">Actual Cost</th><th class="num">Difference</th></tr>
+            <tr><td>Sheets</td><td>Target</td><td class="num">40</td><td class="num">35</td><td></td></tr>
+            <tr><td>Towels</td><td>Walmart</td><td class="num">30</td><td class="num">28</td><td></td></tr>
+            <tr><td>Desk Lamp</td><td>Amazon</td><td class="num">25</td><td class="num">22</td><td></td></tr>
+            <tr><td>Laundry Basket</td><td>Target</td><td class="num">18</td><td class="num">15</td><td></td></tr>
+            <tr><td>Hangers</td><td>Walmart</td><td class="num">12</td><td class="num">10</td><td></td></tr>
+          </table>
+          <ul>
+            <li>Add headers.</li>
+            <li>Format money.</li>
+            <li>Add the Difference formula.</li>
+            <li>Add total actual cost.</li>
+            <li>Save the workbook.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section id="progress">
+      <div class="card">
+        <h2>Progress Check</h2>
+        <p>Use this checklist to track comfort and independence with Session 1 skills.</p>
+        <table>
+          <tr><th>Skill</th><th>Building</th><th>Comfortable</th><th>Independent</th></tr>
+          <tr><td>Open Excel and create a blank workbook</td><td></td><td></td><td></td></tr>
+          <tr><td>Identify rows, columns, cells, and worksheet tabs</td><td></td><td></td><td></td></tr>
+          <tr><td>Enter and edit data</td><td></td><td></td><td></td></tr>
+          <tr><td>Format headers and adjust column widths</td><td></td><td></td><td></td></tr>
+          <tr><td>Format currency</td><td></td><td></td><td></td></tr>
+          <tr><td>Use a subtraction formula</td><td></td><td></td><td></td></tr>
+          <tr><td>Use <code>SUM</code></td><td></td><td></td><td></td></tr>
+          <tr><td>Copy a formula down</td><td></td><td></td><td></td></tr>
+          <tr><td>Rename a worksheet</td><td></td><td></td><td></td></tr>
+          <tr><td>Save the file clearly</td><td></td><td></td><td></td></tr>
+        </table>
+
+        <h3>Session 1 Summary</h3>
+        <p>In Session 1, Eileen works on Excel foundations by creating a college budget tracker. The session focuses on practical beginner skills: navigating Excel, understanding rows/columns/cells, entering data, formatting headers, adjusting column widths, formatting currency, and using basic formulas.</p>
+        <p>She practices creating a spreadsheet from scratch and using formulas to calculate differences and totals. The next session builds on this by creating a grade tracker and practicing formulas, percentages, averages, and autofill.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
